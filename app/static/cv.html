@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CareerPilot — CV Studio</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" href="/static/cv.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main">
+    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">C</span>CareerPilot</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/jobs">Jobs</a>
+      <a href="/matches">Matches</a>
+      <a href="/cv" aria-current="page">CV Studio</a>
+      <a href="/applications">Applications</a>
+    </div>
+  </nav>
+
+  <main class="page page-width">
+    <header class="page-head">
+      <div>
+        <h1>CV Studio</h1>
+        <p class="subtitle">Upload your CV, then confirm that every fact is correct.</p>
+      </div>
+      <label class="button primary upload-button" id="upload-label">
+        <span id="upload-text">Upload CV</span>
+        <input id="cv-file" type="file" accept="application/pdf,.pdf">
+      </label>
+    </header>
+
+    <p class="notice" id="notice" role="alert" hidden></p>
+
+    <section class="panel empty-profile" id="empty-state" hidden>
+      <h2>Start with your CV</h2>
+      <p>Upload a text-based PDF up to 10 MB. Your CV stays on this computer.</p>
+    </section>
+
+    <div class="studio" id="profile-view" hidden>
+      <aside class="side-stack">
+        <section class="panel">
+          <h2>Your profile</h2>
+          <p class="panel-text" id="progress-text"></p>
+          <div class="meter" aria-hidden="true"><span id="progress-bar"></span></div>
+        </section>
+
+        <section class="panel">
+          <h2>Needs your attention</h2>
+          <ul class="gap-list" id="gap-list"></ul>
+        </section>
+
+        <form class="panel prefs" id="preferences-form">
+          <h2>Job preferences</h2>
+          <label>Target roles <input id="pref-roles" placeholder="AI Engineer, Data Analyst"></label>
+          <label>Locations <input id="pref-locations" placeholder="Karachi, Remote"></label>
+          <label>Work type
+            <select id="pref-remote">
+              <option value="any">Any</option>
+              <option value="remote">Remote</option>
+              <option value="hybrid">Hybrid</option>
+              <option value="onsite">On-site</option>
+            </select>
+          </label>
+          <div class="prefs-row">
+            <label>Minimum salary <input id="pref-salary" type="number" min="0" step="1"></label>
+            <label>Currency <input id="pref-currency" maxlength="5" placeholder="PKR"></label>
+          </div>
+          <button class="button" type="submit">Save preferences</button>
+        </form>
+      </aside>
+
+      <section class="workspace">
+        <div class="panel">
+          <div class="facts-head">
+            <div class="fact-tabs" id="fact-tabs" role="group" aria-label="Fact type"></div>
+            <button class="button" id="confirm-all" type="button">Confirm all shown</button>
+          </div>
+          <ul class="fact-list" id="fact-list"></ul>
+          <form class="add-fact" id="add-fact-form">
+            <label for="add-fact-value">Something missing?</label>
+            <div>
+              <input id="add-fact-value" maxlength="1000" placeholder="Add a true fact about yourself" autocomplete="off">
+              <button class="button" type="submit">Add</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="panel coming-next">
+          <span class="status live">Live now</span>
+          <h2>Match score and CV tailoring</h2>
+          <p>Open <a href="/matches">Matches</a> and choose Tailor CV on any job. Only your confirmed facts are used, and every change is explained.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <dialog class="detail" id="source-dialog" aria-labelledby="source-title">
+    <div class="detail-head">
+      <div>
+        <h2 id="source-title">Source in your CV</h2>
+        <p id="source-meta"></p>
+      </div>
+      <button class="icon-button" id="close-source" type="button" aria-label="Close">&times;</button>
+    </div>
+    <div class="detail-body source-body"><img id="source-image" alt="CV page with the source text highlighted"></div>
+  </dialog>
+
+  <script src="/static/cv.js"></script>
+</body>
+</html>

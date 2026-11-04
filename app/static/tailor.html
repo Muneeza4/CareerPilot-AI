@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CareerPilot — Tailored CV</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" href="/static/tailor.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main">
+    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">C</span>CareerPilot</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/jobs">Jobs</a>
+      <a href="/matches" aria-current="page">Matches</a>
+      <a href="/cv">CV Studio</a>
+      <a href="/applications">Applications</a>
+    </div>
+  </nav>
+
+  <main class="page page-width">
+    <header class="page-head">
+      <div>
+        <h1>Tailored CV</h1>
+        <p class="subtitle" id="job-name" role="status">Preparing your CV...</p>
+      </div>
+      <a class="button primary" id="download" hidden>Download PDF</a>
+    </header>
+
+    <p class="notice error" id="notice" role="alert" hidden></p>
+
+    <div class="tailor-layout" id="tailor" hidden>
+      <article class="paper" id="paper" aria-label="Tailored CV preview"></article>
+      <aside class="report">
+        <section class="panel report-part">
+          <h2>What changed</h2>
+          <ul id="changes"></ul>
+        </section>
+        <section class="panel report-part" id="missing-part" hidden>
+          <h2>Not added</h2>
+          <p>This job asks for these, but your confirmed facts do not show them.</p>
+          <div class="skill-row" id="missing"></div>
+        </section>
+        <section class="panel report-part">
+          <h2>How to check it</h2>
+          <p>Every line is copied from a fact you confirmed. Only the order changed, and nothing was reworded.</p>
+          <a class="job-link" id="job-link" target="_blank" rel="noopener noreferrer" hidden>View job ↗</a>
+        </section>
+      </aside>
+    </div>
+
+    <section class="panel package" id="package" hidden>
+      <h2>Cover letter</h2>
+      <p>Built only from your confirmed facts. Edit it freely, because it is yours to send.</p>
+      <label class="sr-only" for="letter">Cover letter</label>
+      <textarea id="letter" rows="14"></textarea>
+      <h2>Before you apply</h2>
+      <ul class="checks" id="checks"></ul>
+      <div class="package-foot">
+        <p id="saved" role="status"></p>
+        <button class="button primary" id="save-package" type="button">Save application package</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/tailor.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CareerPilot — Jobs</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main">
+    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">C</span>CareerPilot</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/jobs" aria-current="page">Jobs</a>
+      <a href="/matches">Matches</a>
+      <a href="/cv">CV Studio</a>
+      <a href="/applications">Applications</a>
+    </div>
+  </nav>
+
+  <div class="progress" id="progress" hidden>
+    <div class="progress-bar" id="progress-bar"></div>
+  </div>
+
+  <div class="layout">
+    <div class="scrim" id="scrim" hidden></div>
+    <aside class="sidebar" id="sidebar" aria-label="Filters">
+      <div class="sidebar-head">
+        <h2>Filters</h2>
+        <button class="icon-button" id="close-filters" type="button" aria-label="Close filters">&times;</button>
+      </div>
+
+      <section class="field">
+        <label for="keyword-input">Keywords</label>
+        <form id="keyword-form">
+          <input id="keyword-input" type="text" placeholder="Add a keyword, press Enter" maxlength="60" autocomplete="off">
+        </form>
+        <ul class="chips" id="keyword-list"></ul>
+        <label class="check">
+          <input type="checkbox" id="search-description"> Also match descriptions
+        </label>
+      </section>
+
+      <section class="field">
+        <label for="company">Company</label>
+        <input id="company" type="text" list="company-options" placeholder="Any company" autocomplete="off">
+        <datalist id="company-options"></datalist>
+      </section>
+
+      <section class="field">
+        <label for="location">Location</label>
+        <input id="location" type="text" placeholder="Any location">
+      </section>
+
+      <section class="field">
+        <label for="days">Posted</label>
+        <select id="days">
+          <option value="">Any time</option>
+          <option value="1">Last 24 hours</option>
+          <option value="7">Last 7 days</option>
+          <option value="30">Last 30 days</option>
+        </select>
+      </section>
+
+      <section class="field">
+        <label for="source">Source</label>
+        <select id="source"><option value="">All sources</option></select>
+      </section>
+
+      <section class="field">
+        <label class="check"><input type="checkbox" id="remote-only"> Remote only</label>
+        <label class="check"><input type="checkbox" id="hide-senior"> Hide senior roles</label>
+      </section>
+
+      <button class="clear-filters" id="clear-filters" type="button">Clear filters</button>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="heading">
+          <h1>Jobs</h1>
+          <p class="subtitle"><span id="count" role="status"></span><span id="last-refresh"></span></p>
+        </div>
+        <input class="search" id="query" type="search" placeholder="Search title, company, or description" aria-label="Search jobs">
+        <button class="button filters-button" id="open-filters" type="button">Filters</button>
+        <button class="button primary" id="fetch-button" type="button">Fetch new jobs</button>
+      </header>
+
+      <main class="content">
+        <p class="notice" id="notice" role="alert" hidden></p>
+        <div class="job-list" id="job-list"></div>
+        <nav class="pagination" id="pagination" aria-label="Pages" hidden>
+          <button class="button" id="prev-page" type="button">Previous</button>
+          <span id="page-label"></span>
+          <button class="button" id="next-page" type="button">Next</button>
+        </nav>
+      </main>
+    </div>
+  </div>
+
+  <dialog class="detail" id="detail" aria-labelledby="detail-title">
+    <div class="detail-head">
+      <div>
+        <h2 id="detail-title"></h2>
+        <p id="detail-meta"></p>
+      </div>
+      <button class="icon-button" id="close-detail" type="button" aria-label="Close">&times;</button>
+    </div>
+    <div class="detail-body" id="detail-body"></div>
+    <div class="detail-foot">
+      <a class="button primary" id="detail-apply" target="_blank" rel="noopener noreferrer">View original job posting ↗</a>
+    </div>
+  </dialog>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

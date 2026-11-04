@@ -1,0 +1,22 @@
+interval_hours: 6
+
+# A job is saved when its title contains one of these. Leave empty to save everything.
+keywords:
+  - machine learning
+  - ml engineer
+  - ai engineer
+  - artificial intelligence
+  - data scientist
+  - data engineer
+  - data analyst
+  - python
+  - software engineer
+
+sources:
+  greenhouse: [stripe, databricks]
+  lever: [spotify]
+  ashby: [openai]
+  remotive: true
+  arbeitnow: true
+  # Company career page URLs to scrape, for example https://example.com/careers
+  career_pages: []

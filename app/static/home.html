@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CareerPilot — Home</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main">
+    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">C</span>CareerPilot</a>
+    <div class="nav-links">
+      <a href="/" aria-current="page">Home</a>
+      <a href="/jobs">Jobs</a>
+      <a href="/matches">Matches</a>
+      <a href="/cv">CV Studio</a>
+      <a href="/applications">Applications</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="page-width">
+        <p class="eyebrow">Your personal job search agent</p>
+        <h1>From finding the job to tracking the reply, in one calm place.</h1>
+        <p class="hero-text">CareerPilot collects new jobs for you, matches them with your real experience, helps you prepare an honest application, and keeps track of what happens next. You stay in control of every decision.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="/jobs">Browse jobs</a>
+          <a class="button" href="#steps">See how it works</a>
+        </div>
+        <dl class="stats" aria-label="Live job data">
+          <div><dt>Jobs matching your keywords</dt><dd id="stat-jobs">—</dd></div>
+          <div><dt>Connected sources</dt><dd id="stat-sources">—</dd></div>
+          <div><dt>Last updated</dt><dd id="stat-updated">—</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section page-width">
+      <h2>The journey at a glance</h2>
+      <p class="section-text">Four simple stages from your first search to the final outcome.</p>
+      <div class="stages">
+        <a class="stage" href="/jobs"><span class="stage-number">1</span><h3>Find</h3><p>New jobs arrive automatically and are filtered by your keywords.</p></a>
+        <a class="stage" href="/matches"><span class="stage-number">2</span><h3>Match</h3><p>Your CV is compared with each job to show real fit and real gaps.</p></a>
+        <a class="stage" href="/cv"><span class="stage-number">3</span><h3>Prepare</h3><p>A tailored CV and cover letter are drafted from your true experience.</p></a>
+        <a class="stage" href="/applications"><span class="stage-number">4</span><h3>Apply and track</h3><p>You approve, submit on the official page, and follow every outcome.</p></a>
+      </div>
+    </section>
+
+    <section class="section tinted" id="steps">
+      <div class="page-width">
+        <h2>How it works, step by step</h2>
+        <p class="section-text">What happens at each step, what CareerPilot does, and what you decide.</p>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-number">1</span>
+            <div>
+              <div class="step-head"><h3>Discover jobs</h3><span class="status live">Live now</span></div>
+              <p>CareerPilot checks public job boards and company sources every 6 hours, or whenever you press Fetch new jobs. Each job is cleaned into the same format with its title, company, location, description, date, and original link.</p>
+              <p class="you"><strong>You:</strong> add your keywords and browse the results.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-number">2</span>
+            <div>
+              <div class="step-head"><h3>Remove the noise</h3><span class="status live">Live now</span></div>
+              <p>The same job from two sources is shown once. Jobs that disappear from their source are marked closed. Keywords, location, date, and seniority filters narrow the list instantly.</p>
+              <p class="you"><strong>You:</strong> open a job and read the full details.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-number">3</span>
+            <div>
+              <div class="step-head"><h3>Build your profile</h3><span class="status live">Live now</span></div>
+              <p>You upload your CV. Education, skills, experience, and projects are extracted, and every fact is linked to the exact line it came from.</p>
+              <p class="you"><strong>You:</strong> confirm each fact and set your preferences.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-number">4</span>
+            <div>
+              <div class="step-head"><h3>Match and rank</h3><span class="status live">Live now</span></div>
+              <p>Each job's required skills are compared with your verified profile. You get a score with its reasons: which skills match, which are missing, and the evidence for each one.</p>
+              <p class="you"><strong>You:</strong> choose which jobs are worth applying to.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-number">5</span>
+            <div>
+              <div class="step-head"><h3>Tailor your CV</h3><span class="status live">Live now</span></div>
+              <p>Your most relevant projects and skills are moved forward for the chosen job. Every line is checked against your confirmed facts, and skills you cannot show are reported instead of added.</p>
+              <p class="you"><strong>You:</strong> read what changed, then download the PDF.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-number">6</span>
+            <div>
+              <div class="step-head"><h3>Prepare the application</h3><span class="status live">Live now</span></div>
+              <p>A cover letter and a checklist are created with your tailored CV, then saved together in one folder for each job. Anything your confirmed facts cannot support is flagged.</p>
+              <p class="you"><strong>You:</strong> edit the letter and clear the checklist.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-number">7</span>
+            <div>
+              <div class="step-head"><h3>Review and submit</h3><span class="status live">Live now</span></div>
+              <p>Everything is shown together for a final check. Nothing goes out without your approval, and the official application page opens for you to submit.</p>
+              <p class="you"><strong>You:</strong> approve and submit it yourself.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-number">8</span>
+            <div>
+              <div class="step-head"><h3>Track the outcome</h3><span class="status live">Live now</span></div>
+              <p>Each application moves from Saved to Applied, Interview, and finally Rejected or Offer. Dates, links, and follow-up reminders stay in one place.</p>
+              <p class="you"><strong>You:</strong> update the status when you hear back.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section page-width">
+      <h2>The rules it never breaks</h2>
+      <p class="section-text">These stay true at every step.</p>
+      <div class="rules">
+        <div class="rule"><h3>Only the truth</h3><p>No fake experience, invented numbers, or tools you have not used.</p></div>
+        <div class="rule"><h3>You decide</h3><p>Nothing is submitted without your explicit approval.</p></div>
+        <div class="rule"><h3>Clear reasons</h3><p>Every score shows why, and every job links to its original posting.</p></div>
+        <div class="rule"><h3>Your data stays yours</h3><p>Your jobs database stays on your own computer.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    async function loadStats() {
+      try {
+        const [jobs, filters] = await Promise.all([
+          fetch("/api/jobs").then((response) => response.json()),
+          fetch("/api/filters").then((response) => response.json()),
+        ]);
+        document.getElementById("stat-jobs").textContent = jobs.total.toLocaleString();
+        document.getElementById("stat-sources").textContent = filters.sources.length;
+        if (filters.last_refresh) {
+          const when = new Date(`${filters.last_refresh.replace(" ", "T")}Z`);
+          document.getElementById("stat-updated").textContent = when.toLocaleString(undefined, { day: "numeric", month: "short", hour: "numeric", minute: "2-digit" });
+        }
+      } catch {
+        // The page explains the product even if live numbers are unavailable.
+      }
+    }
+    loadStats();
+  </script>
+</body>
+</html>

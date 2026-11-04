@@ -1,0 +1,55 @@
+.empty-matches { padding: 56px 20px; text-align: center; }
+
+.empty-matches p { max-width: 480px; margin: 6px auto 18px; color: var(--muted); }
+
+.match-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(520px, 100%), 1fr)); gap: 14px; }
+
+.match-card { min-width: 0; padding: 18px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+
+.match-top { display: flex; align-items: flex-start; gap: 14px; }
+
+.match-heading { flex: 1; min-width: 0; }
+
+.match-heading h2 { font-size: 16px; line-height: 1.3; overflow-wrap: anywhere; }
+
+.match-heading p { color: var(--muted); font-size: 13.5px; overflow-wrap: anywhere; }
+
+.score-ring {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border: 4px solid var(--teal);
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.score-ring.weak { border-color: var(--border); }
+
+.match-reasons { margin: 12px 0 0; padding: 0; color: var(--muted); font-size: 13.5px; list-style: none; }
+
+.skill-group { margin-top: 10px; }
+
+.skill-group h3 { margin: 0 0 5px; color: var(--muted); font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+
+.match-card .skill-row { margin-top: 0; }
+
+.match-card details { margin-top: 12px; font-size: 13.5px; }
+
+.match-card summary { color: var(--link); font-weight: 600; cursor: pointer; }
+
+.evidence-list { display: grid; gap: 8px; margin: 8px 0 0; padding: 0; list-style: none; color: var(--muted); }
+
+.evidence-list strong { color: var(--text); }
+
+.breakdown { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 10px; color: var(--muted); font-size: 12.5px; }
+
+.breakdown strong { display: block; color: var(--text); font-size: 15px; }
+
+.match-foot { display: flex; justify-content: flex-end; gap: 16px; margin-top: 12px; }
+
+@media (max-width: 620px) {
+  .breakdown { grid-template-columns: repeat(2, 1fr); }
+}

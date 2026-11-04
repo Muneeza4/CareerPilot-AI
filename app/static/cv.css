@@ -1,0 +1,85 @@
+.upload-button { position: relative; overflow: hidden; }
+
+.upload-button input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+
+.upload-button:focus-within { outline: 2px solid var(--teal); outline-offset: 2px; }
+
+.upload-button.busy { opacity: 0.6; pointer-events: none; }
+
+.empty-profile { padding: 56px 20px; text-align: center; }
+
+.empty-profile p { margin-top: 4px; color: var(--muted); }
+
+.side-stack { display: grid; gap: 16px; min-width: 0; }
+
+.meter span { width: 0; transition: width 0.2s; }
+
+.gap-list { display: grid; gap: 8px; max-height: 240px; margin: 10px 0 0; padding: 0; overflow-y: auto; list-style: none; color: var(--muted); font-size: 13.5px; }
+
+.gap-list li { padding-left: 14px; border-left: 3px solid var(--notice-strong); overflow-wrap: anywhere; }
+
+.prefs { display: grid; gap: 10px; }
+
+.prefs label { display: block; font-size: 13px; font-weight: 600; }
+
+.prefs input, .prefs select, .add-fact input, .fact-edit {
+  width: 100%;
+  height: 38px;
+  margin-top: 4px;
+  padding: 0 10px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--surface);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.prefs-row { display: grid; grid-template-columns: 1fr 96px; gap: 8px; }
+
+.facts-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
+
+.fact-tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.fact-tab { padding: 5px 12px; border: 1px solid var(--border); border-radius: 999px; background: none; color: var(--muted); font-size: 13px; font-weight: 600; cursor: pointer; }
+
+.fact-tab[aria-pressed="true"] { border-color: var(--cta); background: var(--cta); color: var(--cta-text); }
+
+.fact-list { margin: 0; padding: 0; list-style: none; }
+
+.fact-row { display: flex; align-items: center; gap: 12px; padding: 12px 2px; border-bottom: 1px solid var(--border); }
+
+.fact-row.rejected-fact .fact-value { color: var(--muted); text-decoration: line-through; }
+
+.fact-text { flex: 1; min-width: 0; }
+
+.fact-value { display: block; font-size: 14.5px; overflow-wrap: anywhere; }
+
+.fact-text small { color: var(--muted); font-size: 12.5px; }
+
+.fact-actions { display: flex; flex: none; gap: 2px; }
+
+.mini { padding: 4px 8px; border: 0; border-radius: 7px; background: none; color: var(--link); font-size: 13px; font-weight: 600; cursor: pointer; }
+
+.mini:hover { background: var(--bg); }
+
+.fact-edit { margin: 0; }
+
+.add-fact { margin-top: 14px; }
+
+.add-fact label { display: block; font-size: 13px; font-weight: 600; }
+
+.add-fact div { display: flex; gap: 8px; }
+
+.add-fact .button { min-height: 38px; margin-top: 4px; }
+
+.coming-next h2 { margin-top: 8px; }
+
+.coming-next p { margin-top: 4px; color: var(--muted); font-size: 14px; }
+
+.coming-next .status { display: inline-block; }
+
+.source-body img { display: block; width: 100%; height: auto; border: 1px solid var(--border); }
+
+@media (max-width: 620px) {
+  .fact-row { align-items: flex-start; flex-direction: column; gap: 4px; }
+}

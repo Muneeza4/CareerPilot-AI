@@ -1,0 +1,25 @@
+.empty-board { padding: 56px 20px; text-align: center; }
+
+.empty-board p { max-width: 480px; margin: 6px auto 18px; color: var(--muted); }
+
+.board-card { scroll-margin-top: 80px; }
+
+.board-card:target { outline: 2px solid var(--teal); }
+
+.card-files { display: flex; gap: 12px; margin-top: 8px; font-size: 13px; }
+
+.card-actions { display: grid; gap: 6px; margin-top: 10px; }
+
+.card-actions .button { width: 100%; text-align: center; text-decoration: none; }
+
+.follow-up { display: grid; gap: 3px; margin-top: 10px; color: var(--muted); font-size: 12.5px; }
+
+.follow-up input { width: 100%; padding: 5px 8px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; }
+
+.board-card details { margin-top: 10px; font-size: 12.5px; }
+
+.board-card summary { color: var(--link); font-weight: 600; cursor: pointer; }
+
+.card-history { display: grid; gap: 3px; margin: 6px 0 8px; padding: 0; color: var(--muted); list-style: none; }
+
+.board-card details .button { width: 100%; }

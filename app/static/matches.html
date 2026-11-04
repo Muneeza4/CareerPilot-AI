@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CareerPilot — Matches</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" href="/static/matches.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main">
+    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">C</span>CareerPilot</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/jobs">Jobs</a>
+      <a href="/matches" aria-current="page">Matches</a>
+      <a href="/cv">CV Studio</a>
+      <a href="/applications">Applications</a>
+    </div>
+  </nav>
+
+  <main class="page page-width">
+    <header class="page-head">
+      <div>
+        <h1>Matches</h1>
+        <p class="subtitle" id="match-count" role="status">Ranking jobs against your confirmed facts...</p>
+      </div>
+    </header>
+
+    <p class="notice error" id="notice" role="alert" hidden></p>
+
+    <section class="panel empty-matches" id="not-ready" hidden>
+      <h2>Confirm your CV facts first</h2>
+      <p>Matches only use facts you have confirmed, so every score is based on your real experience.</p>
+      <a class="button primary" href="/cv">Open CV Studio</a>
+    </section>
+
+    <div class="match-list" id="match-list"></div>
+
+    <nav class="pagination" id="pagination" aria-label="Pages" hidden>
+      <button class="button" id="prev-page" type="button">Previous</button>
+      <span id="page-label"></span>
+      <button class="button" id="next-page" type="button">Next</button>
+    </nav>
+  </main>
+
+  <script src="/static/matches.js"></script>
+</body>
+</html>

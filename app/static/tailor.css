@@ -1,0 +1,60 @@
+.tailor-layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; align-items: start; gap: 16px; }
+
+.paper { min-width: 0; padding: 36px 40px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+
+.paper h2 { margin: 18px 0 6px; padding-bottom: 3px; border-bottom: 1px solid var(--border); font-size: 15px; }
+
+.paper-name { font-size: 26px; line-height: 1.2; overflow-wrap: anywhere; }
+
+.paper-contact { color: var(--muted); font-size: 14px; overflow-wrap: anywhere; }
+
+.paper-entry { margin-bottom: 9px; }
+
+.paper-entry h3 { margin: 0; font-size: 15px; overflow-wrap: anywhere; }
+
+.paper-entry h3 span { color: var(--muted); font-weight: 400; }
+
+.paper p { overflow-wrap: anywhere; }
+
+.report { display: grid; gap: 14px; }
+
+.report-part { padding: 16px; }
+
+.report-part h2 { margin-bottom: 6px; font-size: 15px; }
+
+.report-part p, .report-part ul { color: var(--muted); font-size: 13.5px; }
+
+.report-part ul { display: grid; gap: 6px; margin: 0; padding-left: 18px; }
+
+.report-part .skill-row { margin-top: 8px; }
+
+.report-part .job-link { display: inline-block; margin-top: 8px; }
+
+.package { margin-top: 16px; padding: 20px; }
+
+.package h2 { margin-bottom: 4px; font-size: 16px; }
+
+.package h2:not(:first-child) { margin-top: 18px; }
+
+.package p { color: var(--muted); font-size: 13.5px; overflow-wrap: anywhere; }
+
+.package textarea { display: block; width: 100%; margin-top: 10px; padding: 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font: inherit; resize: vertical; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+
+.checks { display: grid; gap: 6px; margin: 8px 0 0; padding: 0; font-size: 13.5px; list-style: none; }
+
+.checks li { padding: 7px 10px; border-radius: 8px; background: var(--notice); }
+
+.checks li.warn { background: var(--notice-strong); color: var(--notice-strong-text); }
+
+.checks li.block { background: var(--danger-soft); color: var(--danger); }
+
+.package-foot { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-top: 14px; }
+
+@media (max-width: 900px) {
+  .tailor-layout { grid-template-columns: minmax(0, 1fr); }
+  .report { order: -1; }
+  .paper { padding: 20px; }
+  .package-foot { flex-direction: column; align-items: stretch; }
+}

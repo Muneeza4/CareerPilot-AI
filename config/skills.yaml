@@ -1,0 +1,90 @@
+# Skills that matching can recognise. "exact: true" means letter case must match,
+# which keeps everyday words such as "react" or "excel at" from counting as skills.
+skills:
+  - {name: Python}
+  - {name: Java}
+  - {name: JavaScript, aliases: [js, ecmascript]}
+  - {name: TypeScript}
+  - {name: C++, aliases: [cpp]}
+  - {name: C#, aliases: [csharp, .net, dotnet]}
+  - {name: Go, aliases: [golang]}
+  - {name: Rust, exact: true}
+  - {name: Scala, exact: true}
+  - {name: Kotlin}
+  - {name: Swift, exact: true}
+  - {name: PHP}
+  - {name: Ruby}
+  - {name: SQL}
+  - {name: PostgreSQL, aliases: [postgres]}
+  - {name: MySQL}
+  - {name: MongoDB}
+  - {name: Redis}
+  - {name: Snowflake, exact: true}
+  - {name: BigQuery}
+  - {name: Databricks}
+  - {name: dbt, exact: true}
+  - {name: Airflow}
+  - {name: Kafka}
+  - {name: Spark, aliases: [PySpark, Apache Spark], exact: true}
+  - {name: Hadoop}
+  - {name: Pandas}
+  - {name: NumPy}
+  - {name: scikit-learn, aliases: [sklearn]}
+  - {name: TensorFlow, aliases: [Tensor flow]}
+  - {name: PyTorch}
+  - {name: Keras}
+  - {name: Machine Learning, aliases: [ml, machine-learning]}
+  - {name: Deep Learning}
+  - {name: NLP, aliases: [natural language processing]}
+  - {name: Computer Vision}
+  - {name: LLMs, aliases: [llm, large language models, generative ai, genai]}
+  - {name: Statistics, aliases: [statistical analysis, statistical modeling]}
+  - {name: A/B Testing, aliases: [ab testing, experimentation]}
+  - {name: Data Analysis, aliases: [data analytics]}
+  - {name: Data Visualization}
+  - {name: Exploratory Data Analysis, aliases: [EDA]}
+  - {name: Data Cleaning, aliases: [data wrangling]}
+  - {name: Feature Engineering}
+  - {name: Predictive Modeling, aliases: [predictive modelling, predictive analytics]}
+  - {name: Random Forest, aliases: [random forests]}
+  - {name: XGBoost}
+  - {name: TF-IDF}
+  - {name: NLTK}
+  - {name: Transformers, exact: true}
+  - {name: CNN, aliases: [CNNs], exact: true}
+  - {name: RNN, aliases: [RNNs], exact: true}
+  - {name: Matplotlib}
+  - {name: Seaborn}
+  - {name: Plotly}
+  - {name: Streamlit}
+  - {name: Jupyter, aliases: [jupyter notebook, jupyter notebooks]}
+  - {name: Tableau}
+  - {name: Power BI, aliases: [powerbi]}
+  - {name: Excel, exact: true}
+  - {name: React, aliases: [React.js, ReactJS], exact: true}
+  - {name: Next.js, aliases: [nextjs]}
+  - {name: Vue, aliases: [Vue.js, VueJS], exact: true}
+  - {name: Angular, exact: true}
+  - {name: Node.js, aliases: [nodejs]}
+  - {name: HTML}
+  - {name: CSS}
+  - {name: Django}
+  - {name: Flask, exact: true}
+  - {name: FastAPI}
+  - {name: Spring Boot}
+  - {name: REST APIs, aliases: [rest api, restful, restful apis]}
+  - {name: GraphQL}
+  - {name: Git, aliases: [github, gitlab]}
+  - {name: Docker}
+  - {name: Kubernetes, aliases: [k8s]}
+  - {name: Terraform}
+  - {name: CI/CD, aliases: [continuous integration]}
+  - {name: Linux}
+  - {name: AWS, aliases: [amazon web services]}
+  - {name: Azure, exact: true}
+  - {name: GCP, aliases: [google cloud]}
+  - {name: Microservices}
+  - {name: Distributed Systems}
+  - {name: System Design}
+  - {name: Figma}
+  - {name: Agile, aliases: [scrum], exact: true}

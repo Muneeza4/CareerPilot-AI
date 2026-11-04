@@ -1,0 +1,19 @@
+# Personal data: CVs, databases, application packages
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Secrets
+.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Tooling
+.vscode/
+.idea/
+.streamlit/secrets.toml

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CareerPilot — Applications</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" href="/static/applications.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main">
+    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">C</span>CareerPilot</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/jobs">Jobs</a>
+      <a href="/matches">Matches</a>
+      <a href="/cv">CV Studio</a>
+      <a href="/applications" aria-current="page">Applications</a>
+    </div>
+  </nav>
+
+  <main class="page page-width">
+    <header class="page-head">
+      <div>
+        <h1>Applications</h1>
+        <p class="subtitle">See where every application stands and what needs your attention.</p>
+      </div>
+    </header>
+
+    <p class="notice error" id="notice" role="alert" hidden></p>
+
+    <section class="panel empty-board" id="empty-board" hidden>
+      <h2>No applications yet</h2>
+      <p>Choose a job in Matches, tailor your CV, and save the package. It will appear here for your review.</p>
+      <a class="button primary" href="/matches">Open Matches</a>
+    </section>
+
+    <section class="attention" id="attention" aria-label="Needs your attention" hidden></section>
+
+    <div class="board" id="board"></div>
+  </main>
+
+  <script src="/static/applications.js"></script>
+</body>
+</html>
